@@ -1,0 +1,92 @@
+
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "DM Sans", sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	background-color: rgb(255 255 255);
+	color: #484847;
+	padding-bottom: 5rem;
+}
+
+header-left img {
+	display: block;
+	max-width: 100%;
+}
+
+.responsive-wrapper {
+	width: 100%;
+	max-width: 1900px;
+	margin-left: auto;
+	margin-right: auto;
+        
+}
+.responsive-wrapper1 {
+	width: 100%;
+	max-width: 1900px;
+	margin-left: auto;
+	margin-right: auto;
+        background-color: #ccffff;
+}
+
+
+.header {
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+       
+        
+        
+        
+}
+.header-middle{
+/*    display: flex;
+    justify-content: center;*/
+
+    margin-left: -600px;
+
+    
+}
+.header-all{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.header-right {
+	display: flex;
+	align-items: center;
+}
+
+.header-link {
+       
+	text-decoration: none;
+	margin-left: .75rem;
+	margin-right: .75rem;
+	display: none;
+	font-weight: 500;
+	display: inline-block;
+	
+}
+.header-link :visited {
+  color: green;
+}
+
+.header-link :hover{
+    color: red;
+}
+.header-link :link {
+  color: green;
+}

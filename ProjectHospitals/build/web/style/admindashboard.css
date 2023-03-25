@@ -1,0 +1,797 @@
+*{
+  box-sizing: border-box;
+  font-family: Nunito,sans-serif;
+}
+html,body{
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.admin-page{
+  display: flex;
+  width: 100%;
+  height: 2220px;
+}
+/* Slide menu */
+.slide-menu{
+  width: 260px;
+  height: 100%;
+  background-color: #313a46;
+  position: fixed;
+  overflow:hidden;
+  overflow-y: auto;
+}
+.silde-menu .img-logo{
+}
+.slide-menu .img-logo img{
+  height: 16px;
+}
+.slide-menu .img-logo-sm img{
+  display: none;
+}
+.slide-menu .nav-menu{
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 40px;
+}
+.slide-menu .nav-menu li{
+  display: list-item;
+}
+.slide-menu .nav-menu li a{
+  display: block;
+  text-decoration: none;
+  color: #8391a2;
+  position: relative;
+}
+.slide-menu .nav-menu li a:hover{
+  color: #cedce4;
+}
+.nav-item{
+  padding: 10px 30px;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+.nav-title{
+  font-size: 0.6rem;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  color: #8391a2;
+  cursor: context-menu;
+}
+.nav-item .menu-arrow{
+  position: absolute;
+  top: 0;
+  right:0;
+}
+
+.nav-item a i{
+  margin-right: 10px;
+}
+.nav-item a label{
+  cursor: pointer;
+}
+.number-fix{
+  display:inline-block;
+  height: 14px;
+  width: 14px;
+  background-color: mediumseagreen;
+  text-align: center;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 2px;
+  position: absolute;
+  right: 0;
+  vertical-align:middle;
+}
+.text-fix{
+  display: inline-block;
+  font-size: 0.6rem;
+  height: 13px;
+  width: 30px;
+  background-color: rgba(10,207,151,.18);
+  color: #0acf97;
+  text-align: center;
+  line-height: 13px;
+  border-radius: 2px;
+  position: absolute;
+  top: 13px;
+  right: 0;
+}
+.text-fix-2{
+  display: inline-block;
+  font-size: 0.7rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  height: 15px;
+  width: 35px;
+  text-align: center;
+  line-height:15px;
+  border-radius: 3px;
+  color: #000;
+}
+.nav-item input{
+  display: none;
+}
+.nav-item input:checked + .drop-menu, .nav-item [id*=toggle-drop]:checked + .drop-menu{
+  visibility: visible;
+  position: static;
+}
+.nav-item .drop-menu{
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+  position: absolute;
+  visibility: hidden;
+}
+.nav-item .drop-menu li{
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+.nav-item .drop-menu li a{
+  display: block;
+  padding: 10px 30px 10px 30px;
+  font-size: 0.8rem;
+}
+
+/* End slide menu */
+main{
+  width: calc(100% - 260px);
+  height: 100% !important;
+  margin-left: 260px;
+}
+#open-slidemenu{
+   display: none;
+}
+main header > .icon-menu{
+  display: none;
+}
+main header{
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  z-index: 100;
+}
+header .input-group input{
+  width: 240px;
+  height: 38px;
+  padding-left: 40px;
+  position: relative;
+  top: 15px;
+  left: 30px;
+  background-color: #f1f3fa;
+  border: none;
+  border-radius: 2px;
+  
+}
+header form .icon-search{
+  position: absolute;
+  font-size: 1.2rem;
+  color: #6c757d;
+  top: 27px;
+  left: 40px;
+}
+
+header form .btn-search{
+  position: absolute;
+  height: 38px;
+  width: 75px;
+  top: 15px;
+  left: 270px;
+  color: #fff;
+  background-color: #727cf5;
+  border-color: #727cf5;
+  border-radius: 3px;
+  cursor: pointer;
+}
+header .topbar-right-menu{
+  height: 100%;
+  width: 55%;
+  display: flex;
+}
+header .topbar-right-menu .icon-eng{
+  text-align: center;
+  line-height: 70px;
+  color: #98a6ad;
+}
+header .topbar-right-menu .icon-eng img{
+    height: 12px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+.fa-angle-down{
+  cursor: pointer;
+}
+header .topbar-right-menu .icon-eng .fa-bell-o, .fa-th, .fa-gear{
+  margin-left: 15px;
+  cursor: pointer;
+}
+header .topbar-right-menu .user-noti{
+  height: 100%;
+  width: 160px;
+  background-color: #eee;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+.user-noti img{
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.user-noti .user-account{
+  display: flex;
+  flex-direction: column;
+  color: #98a6ad;
+}
+.user-noti .user-account span:nth-child(2){
+  font-size: 12px;
+}
+main .admin-content{
+  width: 100%;
+  background-color: #fafbfe;
+  color: #6c757d;
+  height: calc(100% - 70px);
+  margin-top: 70px;
+}
+main .admin-content .page-title{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  color: #6c757d;
+  width: 100%;
+  height: 75px;
+}
+main .admin-content .page-title h2{
+  width: 65%;
+  font-weight: 500;
+  padding-left: 30px;
+}
+main .admin-content .page-title .page-title-right{
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+main .admin-content .page-title .page-title-right input{
+  width: 187px;
+  height: 38px;
+  font-size: 0.9rem;
+  background-color: #f1f3fa;
+  border: none;
+  border-radius: 2px;
+  color: #6c757d;
+  padding-left: 10px;
+}
+main .admin-content .page-title .page-title-right .btn-calendar{
+  height: 38px;
+  width: 44px;
+  background-color: #727cf5;
+  border-radius: 2px;
+  color: #fff;
+  text-align: center;
+  font-size: 0.7rem;
+}
+main .admin-content .page-title .page-title-right .btn-calendar i{
+  line-height: 38px;
+}
+main .admin-content .page-title .page-title-right button{
+  height: 38px;
+  width: 44px;
+  background-color: #727cf5;
+  border-radius: 2px;
+  color: #fff;
+  border: none;
+  font-size: 0.7rem;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+main .admin-content .page-content-1{
+  display: flex;
+  height: 364px;
+  width: 100%;
+}
+main .admin-content .page-content-1 .content-1-left{
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .admin-content .page-content-1 .content-1-left .top, main .admin-content .page-content-1 .content-1-left .bottom{
+  width: 100%;
+  display: flex;
+  margin: 10px 30px;
+}
+main .admin-content .page-content-1 .content-1-left .top .card-body, main .admin-content .page-content-1 .content-1-left .bottom .card-body{
+  width: 50%;
+  
+  height: 160px;
+  margin-right: 30px;
+  background-color: #fff;
+  padding: 0 20px;
+  font-size: 0.8rem;
+}
+.card-body h2{
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #6c757d;
+}
+.card-body p{
+  color: #98a6ad;
+}
+.card-body .price-red{
+  margin-bottom: 8px;
+  color: red;
+}
+.card-body .price-green{
+  margin-bottom: 8px;
+  color: green;
+}
+.card-body .cardbody-bt{
+  margin-top: 0;
+}
+main .admin-content .page-content-1 .content-1-right{
+  width: 55%;
+  padding: 10px;
+  background-color: #fff;
+}
+main .admin-content .page-content-1 .content-1-right .content-1-right-title{
+  display: flex;
+  justify-content: space-between;
+}
+main .admin-content .page-content-1 .content-1-right .content-1-right-title i{
+  margin-top: 10px;
+}
+main .admin-content .page-content-1 .content-1-right h2{
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+main .admin-content .page-content-2{
+  display: flex;
+  width: 100%;
+  padding-left: 30px;
+  height: 611px;
+  
+  margin-top: 20px;
+}
+main .admin-content .page-content-2 .content-2-left{
+  
+  width: 70%;
+  padding: 0px 20px;
+  background-color: #fff;
+}
+main .admin-content .page-content-2 .content-2-left .content-2-left-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+main .admin-content .page-content-2 .content-2-left .content-2-left-title h2{
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+main .admin-content .page-content-2 .content-2-left .card-title{
+  height: 116px; 
+  background-color: #fafbfe; 
+  display: flex;
+}
+main .admin-content .page-content-2 .content-2-left .card-title .card-title-left, main .admin-content .page-content-2 .content-2-left .card-title .card-title-right{
+  width: 50%;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 0.9rem;
+}
+main .admin-content .page-content-2 .content-2-left .card-title .card-title-left i{
+  font-size: 0.7rem;
+  color: #727cf5;
+  margin-right: 14px;
+}
+main .admin-content .page-content-2 .content-2-left .card-title .card-title-left span, main .admin-content .page-content-2 .content-2-left .card-title .card-title-right span{
+  font-size: 2rem;
+}
+main .admin-content .page-content-2 .content-2-left .card-title .card-title-right i{
+  font-size: 0.7rem;
+  color: #0acf97;
+  margin-right: 14px;
+}
+.revenue-chart{
+  margin-top: 70px;
+  position: relative;
+}
+.revenue-chart .card-revenue{
+  height: 177px;
+  width: 350px;
+  position: absolute;
+  top: -50px;
+  left: 60px;
+  color: #98a6ad;
+  font-weight: normal;
+}
+.revenue-chart .card-revenue a{
+  text-decoration: none;
+  width: 171px;
+  height: 37px;
+  color: #727cf5;
+  border: 1px solid #727cf5;
+  padding: 7px 14px;
+}
+.revenue-chart .card-revenue a i{
+  margin-left: 15px;
+}
+main .admin-content .page-content-2 .content-2-right{
+  width: 30%;
+  margin-left: 30px;
+ 
+}
+main .admin-content .page-content-2 .content-2-right .content-2-right-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .admin-content .page-content-2 .content-2-right .content-2-right-title h2{
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+main .admin-content .page-content-2 .content-2-right .content-2-right-title i{
+  margin-right: 5px;
+}
+.map-world{
+  position: relative;
+  width: 100%;
+  height: 224px;
+  margin-top: 30px;
+}
+.map-world .map-zoomin, .map-world .map-zoomout{
+  height: 15px;
+  width: 15px;
+  background-color: #000;
+  line-height: 15px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.map-world .map-zoomin{
+  top:0;
+  left: 10px;
+}
+.map-world .map-zoomout{
+  left: 10px;
+  top: 20px;
+}
+.map-area span{
+  margin-left: 15px;
+}
+.probar{
+  width: calc(100% - 50px);
+  height: 5px;
+  background-color: #eee;
+  border-radius: 5px;
+  display: inline-block;
+}
+.probar-orange{
+  width: 72%;
+  background-color: #727cf5;
+  height: 5px;
+}
+.page-content-3{
+  
+  display: flex;
+  height: 500px;
+  width: 100%;
+  margin-top: 20px;
+  
+}
+.page-content-3-left, .page-content-3-right{
+  width: 50%;
+  margin-left: 30px;
+  
+}
+.page-content-3-left .content-3-left-title, .page-content-3-right .content-3-right-title{
+  display: flex;
+  justify-content: space-between;
+}
+.page-content-3-left .content-3-left-title i, .page-content-3-right .content-3-right-title i{
+  margin-top: 15px;
+  margin-right: 10px;
+}
+.page-content-3-left .content-3-left-title h2, .page-content-3-right .content-3-right-title h2{
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-left: 20px;
+}
+#SvgjsSvg18201{
+  margin-top: 40px;
+}
+.chart-list{
+  height: 148px;
+  width: 386px;
+  padding-left: 20px;
+  margin-right: 0;
+}
+.chart-list p{
+  
+  width: 100%;
+  height: 22px;
+}
+.chart-list p span{
+  float: right;
+}
+.chart-list p i{
+  color: #727cf5;
+}
+.simplebar-wrapper{
+  width: 386px;
+  height: 424px;
+  margin: 0 auto;
+  overflow: auto;
+}
+.timeline-item{
+  position: relative;
+  height: 81px;
+  margin-bottom: 8px;
+}
+.timeline-item:before{
+  width: 2px;
+  background-color: #f1f3fa;
+  content: "";
+  bottom: 0;
+  position: absolute;
+  left: 9px;
+  height: 69px;
+  top: 20px;
+}
+.simplebar-wrapper .timeline-item .fa-upload{
+  background-color: rgba(57,175,209,.25);
+  height: 20px;
+  width: 20px;
+  font-size: 0.7rem;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: #39afd1;
+  float: left;
+}
+.simplebar-wrapper .timeline-item .fa-volume-control-phone{
+  height: 20px;
+  width: 20px;
+  font-size: 0.7rem;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  float: left;
+  background-color: rgba(114,124,245,.25);
+  color: #727cf5;
+}
+.simplebar-wrapper .timeline-item .fa-volume-control-phone + .timeline-item-info a{
+  color: #727cf5;
+}
+.timeline-item-info{
+  margin-left: 30px;
+}
+.timeline-item-info a{
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  color: #39afd1;
+  font-weight: bold;
+}
+
+.timeline-item-info p{
+  margin-top: 5px;
+}
+.page-content-4{
+  width: 100%;
+  height: 500px;
+  padding: 0 30px;
+  background-color: #fff;
+}
+.page-content-4 .content-4-title{
+  display: flex;
+  justify-content: space-between;
+}
+.page-content-4 .content-4-title .export{
+  margin-top: 20px;
+  color: #727cf5;
+}
+.page-content-4 .content-4-title .export a{
+  text-decoration: none;
+  margin-right: 20px;
+}
+.table-res{
+  width: 850px;
+  height: 395px;
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+table tbody tr{
+  display: table-row;
+  border-top: 1px solid #98a6ad;
+  height: 79px;
+}
+table tbody tr td h4{
+  margin: 6px 0;
+  font-weight: normal;
+}
+table tbody tr td span{
+  color: #98a6ad;
+  font-size: 13px;
+}
+footer{
+  height: 61px;
+  width: 100%;
+  padding: 19px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-right a{
+  text-decoration: none;
+  margin-left: 24px;
+  color: #98a6ad;
+}
+/* Responsive */
+
+@media (max-width: 992px){
+/*   Slide Menu */
+  .admin-page{
+    height: 4000px;
+  }
+  header .input-group input, header form .btn-search{
+    display: none;
+  }
+  header form .icon-search{
+    position: absolute;
+    left:25%;
+    top: 25px;
+  }
+  header .topbar-right-menu{
+    width: 70%;
+  }
+  main .admin-content .page-title h2{
+    width: 45%;
+    font-weight: 500;
+    padding-left: 30px;
+  }
+  main .admin-content .page-title .page-title-right{
+    width: 55%;
+    display: flex;
+    align-items: center;
+  }
+  main .admin-content .page-content-1{
+    display: flex;
+    flex-direction: column;
+    height: 364px;
+    width: 100%;
+  }
+  main .admin-content .page-content-1 .content-1-left{
+    width: 100%;
+  }
+  main .admin-content .page-content-1 .content-1-left .top, main .admin-content .page-content-1 .content-1-left .bottom{
+    width: 100% !important;
+    display: flex;
+    margin: 10px 30px;
+    flex-direction: column;
+  }
+  main .admin-content .page-content-1 .content-1-left .top .card-body, main .admin-content .page-content-1 .content-1-left .bottom .card-body{
+    width: 100%;
+    height: 160px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 0 20px;
+    font-size: 0.8rem;
+}
+  main .admin-content .page-content-1 .content-1-right{
+    width: 100%;
+    margin-left: 30px;
+  }
+  main .admin-content .page-content-2{
+    margin-top: 700px;
+    display: flex;
+    flex-direction: column;
+  }
+  main .admin-content .page-content-2 .content-2-left, main .admin-content .page-content-2 .content-2-right{
+    width: 100%;
+  }
+  main .admin-content .page-content-2 .content-2-right{
+    margin-left: 0;
+  }
+  .page-content-3{
+    margin-top: 600px !important;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .page-content-3 .page-content-3-right, .page-content-3 .page-content-3-left{
+    width: 100%;
+    margin-left: 30px;
+  }
+  .simplebar-wrapper{
+    width: 100%;
+  }
+  .page-content-4{
+    margin-top: 500px;
+  }
+  .table-res{
+    width: 100%;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-right{
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 917px) and (min-width: 768px){
+  main .admin-content .page-title .page-title-right{
+    width: 80%;
+  }
+  header .topbar-right-menu{
+    width: 80%;
+  }
+  header form .icon-search{
+    position: absolute;
+    left:15%;
+    
+  }
+}
+@media (max-width: 767px){
+  .slide-menu{
+    position: absolute;
+    top:-100%;
+    transition: .5s;
+    z-index: 1000;
+  }
+  
+  main{
+    width: 100% !important;
+    height: 100%;
+    
+    margin-left: 0;
+  }
+  .admin-page #open-slidemenu:checked + .slide-menu{
+    top:70px;
+    position: fixed;
+  }
+  header{
+    position: fixed;
+    z-index: 100;
+    background-color: #fff;
+    
+  }
+  .icon-menu{
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    cursor: pointer;
+    display: block !important;
+  }
+  header form .icon-search{
+    left: 250px;
+  }
+  main .admin-content .page-title .page-title-right{
+    width: 60%;
+  }
+  header .topbar-right-menu{
+    width: 60%;
+  }
+}

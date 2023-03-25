@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+   margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 8px;
+  
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+     margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 8px;
+  background-color: lightblue;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  nav {
+    flex: 1;
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .nav-section {
+    flex: 1;
+    width: 80%;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  li a:hover {
+    background-color: #ddd;
+  }
+  
+  #main {
+    flex: 2;
+    padding: 20px;
+  }
+  .card {
+			background-color: #D4D3E8;
+			color: white;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+			font-family: Arial, sans-serif;
+			text-align: center;
+			width: 300px;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+
+.table-box {
+			border: 2px solid #ccc;
+			border-radius: 10px;
+			padding: 20px;
+			font-family: Arial, sans-serif;
+			margin: 0 auto;
+			margin-top: 50px;
+			width: 80%;
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+		}
+		.table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+		.table th, .table td {
+			padding: 10px;
+			text-align: left;
+			border-bottom: 1px solid #ccc;
+		}
+		.table th {
+			background-color: #f2f2f2;
+		}
+		.table input[type="checkbox"] {
+			margin-right: 10px;
+		}
+.details-box {
+			background-color: #f2f2f2;
+			padding: 20px;
+			font-family: 'Inter', sans-serif;
+			margin: 0 auto;
+			margin-top: 50px;
+			width: 80%;
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+		}
+		.details {
+			padding: 10px 0;
+		}
+		.details h3 {
+			margin: 0;
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+		}
+		.details ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.details li {
+			padding: 5px 0;
+			color: #666;
+		}

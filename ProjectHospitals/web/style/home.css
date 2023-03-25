@@ -1,0 +1,40 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 6, 2023, 9:33:58 PM
+    Author     : Hi! Le Minh Hieu
+*/
+.page-title{
+    text-align: center;
+}
+.article{
+    text-align: center;
+}
+.article-author-img{
+    max-width: 100%;
+}
+.article-author-img img{
+    width: 100%;
+    height: 400px;
+}
+.chuyen_gia{
+    text-align: center;
+    color: black;
+}
+.info{
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 7px 7px;
+    display:inline-block;
+    margin: 0 10px;
+    max-width: fit-content;
+    width: calc(92% / 4);
+    font-size: 10px;
+    text-align: center;
+}
+.info img{
+    width: 100%;
+    height: 40vh;
+    max-width: fit-content;
+    margin-bottom: 10px;
+}
